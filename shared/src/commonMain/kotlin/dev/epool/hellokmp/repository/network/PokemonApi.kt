@@ -1,6 +1,6 @@
-package dev.epool.hellokmp.network
+package dev.epool.hellokmp.repository.network
 
-import dev.epool.hellokmp.network.models.GetPokemonResponse
+import dev.epool.hellokmp.repository.network.models.GetPokemonResponse
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.HttpClientEngine
 import io.ktor.client.features.json.JsonFeature

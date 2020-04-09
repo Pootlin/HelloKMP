@@ -7,7 +7,7 @@
 
         <variable
             name="pokemon"
-            type="dev.epool.hellokmp.models.PokemonIdentity" />
+            type="dev.epool.hellokmp.domain.models.PokemonIdentity" />
 
     </data>
 

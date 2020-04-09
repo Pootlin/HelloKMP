@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import dev.epool.hellokmp.databinding.ItemPokemonBinding
-import dev.epool.hellokmp.models.PokemonIdentity
+import dev.epool.hellokmp.domain.models.PokemonIdentity
 
 class PokemonsAdapter : ListAdapter<PokemonIdentity, PokemonsAdapter.ViewHolder>(PokemonDiff()) {
 

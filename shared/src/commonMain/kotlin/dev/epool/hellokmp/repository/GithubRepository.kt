@@ -1,6 +1,6 @@
 package dev.epool.hellokmp.repository
 
-import dev.epool.hellokmp.network.GithubClient
+import dev.epool.hellokmp.repository.network.GithubClient
 
 internal class GithubRepository(
     private val githubClient: GithubClient

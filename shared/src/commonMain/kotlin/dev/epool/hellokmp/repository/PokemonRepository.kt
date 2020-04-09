@@ -1,8 +1,8 @@
 package dev.epool.hellokmp.repository
 
-import dev.epool.hellokmp.extensions.toPokemonIdentity
-import dev.epool.hellokmp.network.PokemonApi
-import dev.epool.hellokmp.network.models.PokemonResult
+import dev.epool.hellokmp.repository.mapper.toPokemonIdentity
+import dev.epool.hellokmp.repository.network.PokemonApi
+import dev.epool.hellokmp.repository.network.models.PokemonResult
 
 internal class PokemonRepository(
     private val pokemonApi: PokemonApi

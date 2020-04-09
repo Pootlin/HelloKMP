@@ -1,4 +1,4 @@
-package dev.epool.hellokmp.models
+package dev.epool.hellokmp.domain.models
 
 data class PokemonIdentity(
     val id: Int,

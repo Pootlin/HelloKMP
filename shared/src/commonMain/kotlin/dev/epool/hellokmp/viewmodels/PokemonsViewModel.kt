@@ -1,8 +1,8 @@
 package dev.epool.hellokmp.viewmodels
 
 import dev.epool.hellokmp.di.myKodein
-import dev.epool.hellokmp.models.PokemonIdentity
-import dev.epool.hellokmp.usecases.GetFirstPokemonsUseCase
+import dev.epool.hellokmp.domain.models.PokemonIdentity
+import dev.epool.hellokmp.domain.GetFirstPokemonsUseCase
 import org.kodein.di.erased.instance
 
 class PokemonsViewModel : ViewStateViewModel<PokemonsViewModel.ViewState>(ViewState()) {
