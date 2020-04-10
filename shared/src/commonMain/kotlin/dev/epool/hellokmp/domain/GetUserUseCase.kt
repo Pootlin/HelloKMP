@@ -1,4 +1,4 @@
-package dev.epool.hellokmp.usecases
+package dev.epool.hellokmp.domain
 
 import dev.epool.hellokmp.repository.GithubRepository
 

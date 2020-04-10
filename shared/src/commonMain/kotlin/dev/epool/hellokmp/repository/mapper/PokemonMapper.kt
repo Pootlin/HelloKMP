@@ -1,7 +1,7 @@
-package dev.epool.hellokmp.extensions
+package dev.epool.hellokmp.repository.mapper
 
-import dev.epool.hellokmp.models.PokemonIdentity
-import dev.epool.hellokmp.network.models.PokemonResult
+import dev.epool.hellokmp.domain.models.PokemonIdentity
+import dev.epool.hellokmp.repository.network.models.PokemonResult
 
 private val POKEMON_ID_REGEX = """https://pokeapi.co/api/v2/pokemon/(\d+)/""".toRegex()
 

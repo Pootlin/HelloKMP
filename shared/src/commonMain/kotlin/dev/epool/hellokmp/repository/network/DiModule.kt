@@ -1,4 +1,4 @@
-package dev.epool.hellokmp.network
+package dev.epool.hellokmp.repository.network
 
 import dev.epool.hellokmp.httpClientEngine
 import io.ktor.client.engine.HttpClientEngine

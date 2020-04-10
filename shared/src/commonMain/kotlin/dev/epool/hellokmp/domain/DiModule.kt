@@ -1,4 +1,4 @@
-package dev.epool.hellokmp.usecases
+package dev.epool.hellokmp.domain
 
 import org.kodein.di.Kodein
 import org.kodein.di.erased.bind

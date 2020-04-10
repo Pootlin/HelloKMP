@@ -1,4 +1,4 @@
-package dev.epool.hellokmp.network.models
+package dev.epool.hellokmp.repository.network.models
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

@@ -3,8 +3,8 @@ package dev.epool.hellokmp.viewmodels
 import dev.epool.hellokmp.Parcelable
 import dev.epool.hellokmp.Parcelize
 import dev.epool.hellokmp.di.myKodein
-import dev.epool.hellokmp.network.models.GithubUser
-import dev.epool.hellokmp.usecases.GetUserUseCase
+import dev.epool.hellokmp.repository.network.models.GithubUser
+import dev.epool.hellokmp.domain.GetUserUseCase
 import org.kodein.di.erased.instance
 
 class MainViewModel : ViewStateViewModel<MainViewModel.ViewState>(ViewState()) {
