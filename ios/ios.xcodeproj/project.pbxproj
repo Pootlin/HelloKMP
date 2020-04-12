@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		2A97A9F8E7296D361D986B92 /* Pods_ios_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A8049581B013F89EE0572E /* Pods_ios_iosUITests.framework */; };
 		5D528A2AEB3BF3B76C9FEBE8 /* Pods_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B01A96B8A37C13B7C8C2CAD9 /* Pods_ios.framework */; };
+		6A046B272442885000F73921 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A046B262442885000F73921 /* ImageCache.swift */; };
+		6A046B292442896400F73921 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A046B282442896400F73921 /* ImageLoader.swift */; };
+		6A046B2D24428A1000F73921 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A046B2C24428A1000F73921 /* AsyncImage.swift */; };
+		6A046B302442A03E00F73921 /* RefreshUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A046B2F2442A03E00F73921 /* RefreshUI.swift */; };
+		6A046B322442A0E400F73921 /* Rotoscope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A046B312442A0E400F73921 /* Rotoscope.swift */; };
 		6A90635024392470004B3B41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A90634F24392470004B3B41 /* AppDelegate.swift */; };
 		6A90635224392470004B3B41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A90635124392470004B3B41 /* SceneDelegate.swift */; };
 		6A90635424392470004B3B41 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A90635324392470004B3B41 /* ContentView.swift */; };
@@ -49,6 +54,11 @@
 		56218B0C602BA7A828F7BDA5 /* Pods-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.release.xcconfig"; path = "Target Support Files/Pods-ios/Pods-ios.release.xcconfig"; sourceTree = "<group>"; };
 		699063810C372FE5E19D79C6 /* Pods_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69BA5584D5143BD9EBDF8076 /* Pods-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.debug.xcconfig"; path = "Target Support Files/Pods-ios/Pods-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		6A046B262442885000F73921 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		6A046B282442896400F73921 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		6A046B2C24428A1000F73921 /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
+		6A046B2F2442A03E00F73921 /* RefreshUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshUI.swift; sourceTree = "<group>"; };
+		6A046B312442A0E400F73921 /* Rotoscope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rotoscope.swift; sourceTree = "<group>"; };
 		6A90634C24392470004B3B41 /* ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A90634F24392470004B3B41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A90635124392470004B3B41 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +124,25 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		6A046B252442881B00F73921 /* imageUtils */ = {
+			isa = PBXGroup;
+			children = (
+				6A046B262442885000F73921 /* ImageCache.swift */,
+				6A046B282442896400F73921 /* ImageLoader.swift */,
+				6A046B2C24428A1000F73921 /* AsyncImage.swift */,
+			);
+			path = imageUtils;
+			sourceTree = "<group>";
+		};
+		6A046B2E2442A02700F73921 /* viewUtils */ = {
+			isa = PBXGroup;
+			children = (
+				6A046B2F2442A03E00F73921 /* RefreshUI.swift */,
+				6A046B312442A0E400F73921 /* Rotoscope.swift */,
+			);
+			path = viewUtils;
+			sourceTree = "<group>";
+		};
 		6A90634324392470004B3B41 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +168,8 @@
 		6A90634E24392470004B3B41 /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				6A046B2E2442A02700F73921 /* viewUtils */,
+				6A046B252442881B00F73921 /* imageUtils */,
 				6A90634F24392470004B3B41 /* AppDelegate.swift */,
 				6A90635124392470004B3B41 /* SceneDelegate.swift */,
 				6A90635324392470004B3B41 /* ContentView.swift */,
@@ -396,9 +427,14 @@
 			files = (
 				6A90635024392470004B3B41 /* AppDelegate.swift in Sources */,
 				6AE96E34243F9407003963B1 /* MainView.swift in Sources */,
+				6A046B292442896400F73921 /* ImageLoader.swift in Sources */,
 				6AFAAB5F243B786F00E917A7 /* ActivityIndicator.swift in Sources */,
+				6A046B2D24428A1000F73921 /* AsyncImage.swift in Sources */,
+				6A046B272442885000F73921 /* ImageCache.swift in Sources */,
 				6ABFBFBA243AFAE8003A6FE7 /* ViewModelBridges.swift in Sources */,
 				6AE96E36243F98EE003963B1 /* PokemonsView.swift in Sources */,
+				6A046B322442A0E400F73921 /* Rotoscope.swift in Sources */,
+				6A046B302442A03E00F73921 /* RefreshUI.swift in Sources */,
 				6A90635224392470004B3B41 /* SceneDelegate.swift in Sources */,
 				6AE96E32243F02A0003963B1 /* PokemonItem.swift in Sources */,
 				6A90635424392470004B3B41 /* ContentView.swift in Sources */,
