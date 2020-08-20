@@ -9,10 +9,20 @@
 import SwiftUI
 
 struct PokemonsView: View {
-    @ObservedObject var pokemonsBridge = PokemonsViewModelBridge()
-    
+
+    @ObservedObject var bridge = PokemonsViewModelBridge()
+
     var body: some View {
-        Text("Hello, World!")
+        NavigationView {
+            List(bridge.viewState.pokemons, id: \.id) { pokemon in
+                PokemonItem(pokemon: pokemon)
+            }.onPull(perform: { self.bridge.viewModel.loadPokemons() }, isLoading: bridge.viewState.isLoading)
+            .navigationBarTitle("Hello KMP")
+        }.onAppear {
+            self.bridge.viewModel.loadPokemons()
+        }.onDisappear {
+            self.bridge.viewModel.onCleared()
+        }
     }
 }
 

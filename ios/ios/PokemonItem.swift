@@ -7,15 +7,18 @@
 //
 
 import SwiftUI
+import HelloKMP
 
 struct PokemonItem: View {
-    
-    var pokemonName: String
-    var pokemonImageUrl: String
+
+    var pokemon: PokemonIdentity
     
     var body: some View {
         HStack {
-            Text(pokemonName)
+            AsyncImage(url: URL(string: pokemon.imageUrl)!, placeholder: Text("Loading..."), configuration: { $0.resizable() })
+            .frame(width: 100, height: 100)
+            Text(pokemon.name)
+                .font(.title)
         }
     }
 
@@ -23,6 +26,12 @@ struct PokemonItem: View {
 
 struct PokemonItem_Previews: PreviewProvider {
     static var previews: some View {
-        PokemonItem(pokemonName: "Pikachu", pokemonImageUrl: "https://pokeapi.co/api/v2/pokemon/25/")
+        PokemonItem(
+            pokemon: PokemonIdentity(
+                id: 25,
+                name: "Pikemon",
+                imageUrl: "https://pokeapi.co/api/v2/pokemon/25/"
+            )
+        )
     }
 }
